@@ -7,8 +7,8 @@ cursor = conn.cursor()
 def student_add():
 
     while True:
-        name = input("Öğrencinin ismini girin: ")
-        if name.isalpha():
+        first_name = input("Öğrencinin ismini girin: ")
+        if first_name.isalpha():
              break
         else:
             print("Lütfen sadece harf giriniz.")
@@ -37,7 +37,7 @@ def student_add():
 
     cursor.execute(
         "INSERT INTO students (first_name, last_name, age, gender) VALUES (?, ?, ?, ?)",
-        (name, last_name, age, gender)
+        (first_name, last_name, age, gender)
     )
 
     conn.commit()  # Değişiklikleri veritabanına kaydet
