@@ -8,7 +8,7 @@ def student_add():
 
     name = input("Öğrencinin ismini girin: ")
     if name.isalpha():
-        print(" ")
+        print("#")
     else:
         print("Lütfen sadece harf giriniz.")
     name()
