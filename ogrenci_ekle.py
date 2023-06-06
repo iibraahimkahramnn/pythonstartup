@@ -7,14 +7,14 @@ cursor = conn.cursor()
 def student_add():
 
     def first_name (name):
-        if name.isalpha():
+        if name.isalpha(input("Öğrencinin ismini girin: ")):
             print(" ")
         else:
             print("Lütfen sadece harf giriniz.")
         first_name()
     
-    input_str = input("Öğrencinin ismini girin: ")
-    first_name(input_str)
+    
+    
     
 
     def last_name (lastname):
