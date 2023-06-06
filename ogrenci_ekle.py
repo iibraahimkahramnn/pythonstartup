@@ -11,7 +11,8 @@ def student_add():
             print(" ")
         else:
             print("Lütfen sadece harf giriniz.")
-    first_name()
+        first_name()
+    
     input_str = input("Öğrencinin ismini girin: ")
     first_name(input_str)
     
