@@ -13,36 +13,24 @@ def student_add():
         else:
             print("Lütfen sadece harf giriniz.")
 
-    
-    
-    
-    
+        last_name = input("Öğrencinin soyad'ını girin: ")
+        if last_name.isalpha():
+            break
+        else:
+            print("Lütfen sadece harf giriniz.")
 
-    last_name = input("Öğrencinin soyad'ını girin: ")
-    if last_name.isalpha():
-        print(" ")
-    else:
-        print("Lütfen sadece harf giriniz.")
-    last_name()
+        age= input("Öğrencinin yaş'ını girin: ")
+        if age.isalpha():
+            break
+        else:
+            print("Lütfen sadece sayı giriniz.")
 
+        gender = input("Öğrenci'nin cinsiyet'ini girin: ")
+        if gender.isalpha():
+            break
+        else:
+            print("Lütfen sadece harf giriniz.")
 
-
-
-    age= input("Öğrencinin yaş'ını girin: ")
-    if age.isalpha():
-        print(" ")
-    else:
-        print("Lütfen sadece sayı giriniz.")
-    age()      
-    
-
-    gender = input("Öğrenci'nin cinsiyet'ini girin: ")
-    if gender.isalpha():
-        print(" ")
-    else:
-        print("Lütfen sadece harf giriniz.")
-    gender()
-    
 
     cursor.execute(
         "INSERT INTO students (first_name, last_name, age, gender) VALUES (?, ?, ?, ?)",
