@@ -22,7 +22,7 @@ def student_add():
             
     while True:
         age= input("Öğrencinin yaş'ını girin: ")
-        if age.isalpha():
+        if age.isdigit():
             break
         else:
             print("Lütfen sadece sayı giriniz.")
