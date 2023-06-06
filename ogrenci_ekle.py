@@ -12,24 +12,27 @@ def student_add():
              break
         else:
             print("Lütfen sadece harf giriniz.")
-
-        last_name = input("Öğrencinin soyad'ını girin: ")
-        if last_name.isalpha():
-            break
-        else:
-            print("Lütfen sadece harf giriniz.")
-
-        age= input("Öğrencinin yaş'ını girin: ")
-        if age.isalpha():
-            break
-        else:
-            print("Lütfen sadece sayı giriniz.")
-
-        gender = input("Öğrenci'nin cinsiyet'ini girin: ")
-        if gender.isalpha():
-            break
-        else:
-            print("Lütfen sadece harf giriniz.")
+        
+        while True:
+            last_name = input("Öğrencinin soyad'ını girin: ")
+            if last_name.isalpha():
+                break
+            else:
+                print("Lütfen sadece harf giriniz.")
+            
+            while True:
+                age= input("Öğrencinin yaş'ını girin: ")
+                if age.isalpha():
+                    break
+                else:
+                    print("Lütfen sadece sayı giriniz.")
+                
+                while True:
+                    gender = input("Öğrenci'nin cinsiyet'ini girin: ")
+                    if gender.isalpha():
+                        break
+                    else:
+                        print("Lütfen sadece harf giriniz.")
 
 
     cursor.execute(
