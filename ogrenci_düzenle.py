@@ -13,11 +13,36 @@ def student_edit ():
     ogrenci = cursor.fetchone()
 
     
-    first_name = input("Öğrenci adı giriniz: ")
-    last_name = input("Öğrenci'nin soyadını giriniz: ")
-    age = input("Öğrenci'nin yaşını giriniz: ")
-    gender = input("Öğrenci'nin cinsiyetini giriniz: ")
-    id = input("Öğrenci'nin id'sini giriniz: ")
+    while True:
+        first_name = input("Öğrencinin yeni ismini girin: ")
+        if first_name.isalpha():
+             break
+        else:
+            print("Lütfen sadece harf giriniz.")
+        
+    while True:
+        last_name = input("Öğrencinin yeni soyad'ını girin: ")
+        if last_name.isalpha():
+            break
+        else:
+            print("Lütfen sadece harf giriniz.")
+            
+    while True:
+        age= input("Öğrencinin yeni yaş'ını girin: ")
+        if age.isdigit():
+            break
+        else:
+            print("Lütfen sadece sayı giriniz.")
+                
+    while True:
+        gender = input("Öğrenci'nin yeni cinsiyet'ini girin: ")
+        if gender.isalpha():
+            break
+        else:
+            print("Lütfen sadece harf giriniz.")
+
+    id = print("Öğrencinin yeni veya eski id'sini giriniz")
+
 
 
     cursor.execute("UPDATE students SET first_name = ?, last_name = ?, age = ?, gender = ? WHERE id=?", (first_name, last_name, age, gender, id))
