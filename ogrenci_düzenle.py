@@ -20,7 +20,7 @@ def student_edit ():
     id = input("Öğrenci'nin id'sini giriniz: ")
 
 
-    cursor.execute("UPDATE students SET first_name = ?, last_name = ?, age = ?, gender WHERE id=?", (first_name, last_name, age, gender, id))
+    cursor.execute("UPDATE students SET first_name = ?, last_name = ?, age = ?, gender = ? WHERE id=?", (first_name, last_name, age, gender, id))
     conn.commit()
 
 
