@@ -6,12 +6,13 @@ cursor = conn.cursor()
 
 def student_add():
 
-    name = input("Öğrencinin ismini girin: ")
-    if name.isalpha():
-        print("#")
-    else:
-        print("Lütfen sadece harf giriniz.")
-    name()
+    while True:
+        name = input("Öğrencinin ismini girin: ")
+        if name.isalpha():
+             break
+        else:
+            print("Lütfen sadece harf giriniz.")
+
     
     
     
