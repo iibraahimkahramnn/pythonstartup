@@ -13,7 +13,8 @@ def menü():
         print("1. Öğrencileri Listele")
         print("2. Öğrenci Ekle")
         print("3. Öğrenci Sil")
-        print("4. Çıkış Yap")
+        print("4. Öğrenci Düzenle")
+        print("5. Çıkış Yap")
 
         secenek = input("Seçiminizi yapın: ")
 

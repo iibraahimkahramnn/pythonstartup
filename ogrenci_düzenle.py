@@ -17,8 +17,7 @@ def student_edit ():
     last_name = input("Öğrenci'nin soyadını giriniz: ")
     age = input("Öğrenci'nin yaşını giriniz: ")
     gender = input("Öğrenci'nin cinsiyetini giriniz: ")
-    department = input("Öğrenc'nin bölümünü giriniz: ")
-    id = input("Öğrenci'nin no'sunu giriniz: ")
+    id = input("Öğrenci'nin id'sini giriniz: ")
 
 
     cursor.execute("UPDATE students SET first_name = ?, last_name = ?, age = ?, gender WHERE id=?", (first_name, last_name, age, gender, id))
